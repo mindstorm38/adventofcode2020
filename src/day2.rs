@@ -1,5 +1,3 @@
-use std::str::FromStr;
-
 const INPUT: &str = include_str!("res/day2");
 
 type InputLine = (usize, usize, char, String);
