@@ -104,24 +104,24 @@ fn main() {
 
     let start = Instant::now();
     let actions = parse_actions(INPUT.lines().map(String::from));
-    println!("Parsed in {}ms", start.elapsed().as_secs_f64() * 1000f64);
+    println!("Parsed in {}ms", start.elapsed().as_secs_f64() * 1000.0);
     println!();
 
     let start = Instant::now();
     let (east, north) = run_actions(&actions, false);
     println!("#1 Ending at {}/{}", east, north);
     println!("#1 Manhattan distance: {}", east.abs() + north.abs());
-    println!("#1 in {}ms", start.elapsed().as_secs_f64() * 1000f64);
+    println!("#1 in {}ms", start.elapsed().as_secs_f64() * 1000.0);
     println!();
 
     let start = Instant::now();
     let (east, north) = run_actions(&actions, true);
     println!("#2 Ending at {}/{}", east, north);
     println!("#2 Manhattan distance: {}", east.abs() + north.abs());
-    println!("#2 in {}ms", start.elapsed().as_secs_f64() * 1000f64);
+    println!("#2 in {}ms", start.elapsed().as_secs_f64() * 1000.0);
     println!();
 
-    println!("Done in {}ms", start_global.elapsed().as_secs_f64() * 1000f64);
+    println!("Done in {}ms", start_global.elapsed().as_secs_f64() * 1000.0);
 
 
 }
